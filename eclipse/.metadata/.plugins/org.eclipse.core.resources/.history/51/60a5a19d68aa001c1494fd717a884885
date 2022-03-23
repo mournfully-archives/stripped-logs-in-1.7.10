@@ -1,0 +1,21 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.util.MathHelper;
+import net.minecraft.world.World;
+
+public class BlockStrippedOakLog extends Block {
+
+	protected BlockStrippedOakLog(Material material) {
+		super(material);		
+	}
+	
+	public void onBlockPlacedBy(World world, int i, int j, int k, EntityLiving entityliving)
+	{
+		int rotation = MathHelper
+				.floor_double((double) ((entityliving.rotationYaw * 4F) / 360F) + 2.5D) & 3;
+		world.setBlockMetadataWithNotify(i, j, k, rotation - 1);
+	}
+}

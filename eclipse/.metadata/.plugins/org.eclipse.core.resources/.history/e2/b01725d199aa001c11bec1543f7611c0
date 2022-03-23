@@ -1,0 +1,54 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = "sl", name = "StrippedLogs", version = "1.0")
+public class StrippedLogs {
+	
+	public static Block blockStrippedLogsPart1;
+	public static Block blockStrippedLogsPart2;
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		// Item/Block initialization, registration & configuration handling
+		
+		blockStrippedLogsPart1 = new block_stripped_log().setBlockName("strippedLogsPart1").setCreativeTab(tab_stripped_logs);
+		blockStrippedLogsPart2 = new block_stripped_log_2().setBlockName("strippedLogsPart2").setCreativeTab(tab_stripped_logs);
+
+		GameRegistry.registerBlock(blockStrippedLogsPart1, item_stripped_log.class, blockStrippedLogsPart1.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(blockStrippedLogsPart2, item_stripped_log.class, blockStrippedLogsPart2.getUnlocalizedName().substring(5));
+	};
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		// TileEntity, Entity, GUI and Packet registry
+	};
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	};
+	
+	public static CreativeTabs tab_stripped_logs = new CreativeTabs("tab_stripped_logs"){
+		@Override
+		public Item getTabIconItem() {
+			return new ItemStack(blockStrippedLogsPart1).getItem();
+		}
+	};
+}
+
+// ====================== Future Roadmap ======================
+//https://forums.minecraftforge.net/topic/83842-1144-stripped-logs-help-solved/
+//https://forums.minecraftforge.net/topic/30373-1710-solved-access-right-click-action-of-item/	
+
+// ====================== References ======================
+// Minecraft Modding Tutorials 1.7.2 #32 - Trees - Logs/Leaves - YouTube | https://www.youtube.com/watch?v=qgsZK60grrk

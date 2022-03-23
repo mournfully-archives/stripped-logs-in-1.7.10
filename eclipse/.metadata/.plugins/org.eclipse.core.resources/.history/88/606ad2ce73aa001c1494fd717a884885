@@ -1,0 +1,43 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = "sl", name = "Stripped Logs", version = "1.0")
+public class StrippedLogs {
+	
+	public static Block block_stripped_log;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		// Item/Block initialization, registration & configuration handling
+		
+		block_stripped_log = new block_stripped_log().setBlockName("Log").setCreativeTabs(strippedLogsTab);
+		
+		GameRegistry.registerBlock(block_stripped_log, block_stripped_log.getUnlocalizedName().substring(5));
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		// Proxy, TileEntity, Entity, GUI and Packet registry
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	}
+	
+	public static CreativeTabs tab_stripped_logs = new CreativeTabs("tab_stripped_logs"){
+		@Override
+		public Item getTabIconItem(){
+			return new ItemStack(block_stripped_log).getItem();
+		}
+	};
+}

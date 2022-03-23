@@ -1,0 +1,10 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class BlockStrippedOakLog extends Block {
+	protected BlockStrippedOakLog(Material material) {
+		super(material);		
+	}
+}

@@ -1,0 +1,8 @@
+tile.BlockStrippedOakLog.name=Stripped Oak Log
+tile.BlockStrippedSpruceLog.name=Stripped Spruce Log
+tile.BlockStrippedBirchLog.name=Stripped Birch Log
+tile.BlockStrippedJungleLog.name=Stripped Jungle Log
+tile.BlockStrippedAcaciaLog.name=Stripped Acacia Log
+tile.BlockStrippedDarkOakLog.name=Stripped Dark Oak Log
+
+itemGroub.tabStrippedLogs=Stripped Logs

@@ -1,0 +1,33 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = "sl", name = "Stripped Logs", version = "1.0")
+public class StrippedLogs {
+	
+	public static Item itemTable;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		// Item/Block init and registering
+		// Config handling
+		itemTable = new ItemTable().setUnlocalizedName("ItemTable"); //Output: item.ItemTable
+		GameRegistry.registerItem(itemTable, itemTable.getUnlocalizedName().substring(5)); //Output: ItemTable
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		// Proxy, TileEntity, Entity, GUI and Packet registery
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+
+	}
+}

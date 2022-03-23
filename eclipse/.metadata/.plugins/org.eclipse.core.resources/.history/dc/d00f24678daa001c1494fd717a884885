@@ -1,0 +1,8 @@
+tile.strippedLogsPart1.oak.name=Stripped Oak Log
+tile.strippedLogsPart1.spruce.name=Stripped Spruce Log
+tile.strippedLogsPart1.birch.name=Stripped Birch Log
+tile.strippedLogsPart1.jungle.name=Stripped Jungle Log
+tile.strippedLogsPart1.acacia.name=Stripped Acacia Log
+tile.strippedLogsPart1.dark.name=Stripped Dark Oak Log
+
+itemGroub.tab_stripped_logs=Stripped Logs

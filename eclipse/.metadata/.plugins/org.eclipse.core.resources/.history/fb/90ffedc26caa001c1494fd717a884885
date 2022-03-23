@@ -1,0 +1,17 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.BlockRotatedPillar;
+import net.minecraft.block.material.Material;
+import net.minecraft.util.IIcon;
+
+public class stripped_oak_log extends BlockRotatedPillar {
+	protected stripped_oak_log(Material material) {
+		super(material);		
+	}
+
+	@Override
+	protected IIcon getSideIcon(int p_150163_1_) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

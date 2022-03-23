@@ -1,0 +1,46 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.item.Item;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = "sl", name = "Stripped Logs", version = "1.0")
+public class StrippedLogs {
+	
+	public static Block blockStrippedOakLog;
+	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		// Item/Block initialization, registration & configuration handling
+		
+		blockStrippedOakLog = new BlockStrippedOakLog(Material.wood).setBlockName("BlockStrippedOakLog").setBlockTextureName("sl:stripped_oak_log");
+		//.setCreativeTab()	
+		
+		GameRegistry.registerBlock(blockStrippedOakLog, blockStrippedOakLog.getUnlocalizedName().substring(5));
+	}
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		// Proxy, TileEntity, Entity, GUI and Packet registry
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	}
+	
+//	public static CreativeTabs tabStrippedLogs = new CreativeTabs("tabStrippedLogs"){
+//		@Override
+//		public Item getTabIconItem(){
+//			return new ItemStack(blockTable).getItem();
+//		}
+//	};
+}
