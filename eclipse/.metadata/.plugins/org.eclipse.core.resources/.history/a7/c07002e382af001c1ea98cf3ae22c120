@@ -1,0 +1,67 @@
+package mournfully.strippedlogs;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockNewLog;
+import net.minecraft.block.BlockOldLog;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemMultiTexture;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+@Mod(modid = "sl", name = "StrippedLogs", version = "1.4")
+public class StrippedLogs {
+	
+	public static Block blockStrippedOldLog;
+	public static Block blockStrippedNewLog;
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		// Item/Block initialization, registration & configuration handling
+		
+		blockStrippedOldLog = new BlockStrippedOldLog().setBlockName("stripped").setBlockTextureName("stripped").setCreativeTab(CreativeTabs.tabBlock);
+		blockStrippedNewLog = new BlockStrippedNewLog().setBlockName("stripped").setBlockTextureName("stripped").setCreativeTab(CreativeTabs.tabBlock);
+
+		GameRegistry.registerBlock(blockStrippedOldLog, ItemStrippedOldLogs.class, blockStrippedOldLog.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(blockStrippedNewLog, ItemStrippedNewLogs.class, blockStrippedNewLog.getUnlocalizedName().substring(5));
+
+// blockRegistry.addObject(17, "log", (new BlockOldLog()).setBlockName("log").setBlockTextureName("log"));
+// blockRegistry.addObject(162, "log2", (new BlockNewLog()).setBlockName("log").setBlockTextureName("log"));
+
+/*
+	else if (block == Blocks.log){
+		object = (new ItemMultiTexture(Blocks.log, Blocks.log, BlockOldLog.field_150168_M)).setUnlocalizedName("log");
+	}
+	else if (block == Blocks.log2){
+    	object = (new ItemMultiTexture(Blocks.log2, Blocks.log2, BlockNewLog.field_150169_M)).setUnlocalizedName("log");
+	}
+*/
+	};
+	
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		// TileEntity, Entity, GUI and Packet registry
+	};
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	};
+}
+
+// ====================== Future Roadmap ======================
+//https://forums.minecraftforge.net/topic/83842-1144-stripped-logs-help-solved/
+//https://forums.minecraftforge.net/topic/30373-1710-solved-access-right-click-action-of-item/	
+//add 1.14 Debarking Log sound
+//make axe lose durability for it
+
+// ====================== References ======================
+// Minecraft Modding Tutorials 1.7.2 #32 - Trees - Logs/Leaves - YouTube | https://www.youtube.com/watch?v=qgsZK60grrk
+// Modding Tutorials (1.7.10) - YouTube | https://www.youtube.com/playlist?list=PLy11IosblXIExa6zzhjhYNXeBW9o6FhPU
+// Default 1.8 -> 1.18 Minecraft Texture Packs | https://texture-packs.com/resourcepack/default-pack/

@@ -1,8 +1,6 @@
-itemGroup.tab_stripped_logs=Mournfullys Stripped Logs
-
-tile.strippedLogsPart1.1.name=Stripped Oak Log
-tile.strippedLogsPart1.2.name=Stripped Spruce Log
-tile.strippedLogsPart1.3.name=Stripped Birch Log
-tile.strippedLogsPart1.4.name=Stripped Jungle Log
-tile.strippedLogsPart2.1.name=Stripped Acacia Log
-tile.strippedLogsPart2.2.name=Stripped Dark Oak Log
+tile.stripped.oak.name=Stripped Oak Log
+tile.stripped.spruce.name=Stripped Spruce Log
+tile.stripped.birch.name=Stripped Birch Log
+tile.stripped.jungle.name=Stripped Jungle Log
+tile.stripped2.acacia.name=Stripped Acacia Log
+tile.stripped2.dark_oak.name=Stripped Dark Oak Log

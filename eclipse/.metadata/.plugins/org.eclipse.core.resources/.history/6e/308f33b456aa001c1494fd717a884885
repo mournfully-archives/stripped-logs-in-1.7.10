@@ -1,8 +1,0 @@
-package mournfully.strippedlogs;
-
-import cpw.mods.fml.common.Mod;
-
-@Mod(modid = "sl", name = "Stripped Logs", version = "1.0")
-public class StrippedLogs {
-
-}
