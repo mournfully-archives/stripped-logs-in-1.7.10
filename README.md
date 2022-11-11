@@ -1,14 +1,10 @@
 # StrippedLogs-1.7.10
 1.14 Stripped Logs backported to 1.7.10 🌳
+
 ![2022-03-29_14 00 34](https://user-images.githubusercontent.com/98147018/160682523-dca42411-f14f-4e93-b9e1-09aded162e15.png)
 If you wish to try it out, you can download the latest version from the releases tab on the right side.
 
-## Future Roadmap (don't quote me on that)
-- ![2022-03-30_17 33 57](https://user-images.githubusercontent.com/98147018/162556754-1edd6d6a-9359-445a-b928-15d07c995baf.png)
-- https://forums.minecraftforge.net/topic/83842-1144-stripped-logs-help-solved/
-- https://forums.minecraftforge.net/topic/30373-1710-solved-access-right-click-action-of-item/	
-- add 1.14 Debarking Log sound
-- make axe lose durability for it
+For now, there isn't any way to obtain them through crafting or in-world actions. I've just been spawning them in through creative mode whenever I needed them. Oh, and also I think there was an issue with log textures changing to different types of trees or something along those lines. I'm not sure if I every got around to fixing that, it's been a while and I've already gotten bored of minecraft and for the most part stopped gaming altogether lol.
 
 ## References (ctrl-c ctrl-v)
 #### Default 1.8 -> 1.18 Minecraft Texture Packs 
